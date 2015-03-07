@@ -1,0 +1,126 @@
+*{
+	box-sizing: border-box !important;
+	font-family: 'Roboto', sans-serif !important;
+	text-rendering: optimizeLegibility !important;
+}
+.btn-todo{
+	background-color: #6BB299;
+	color: #FFF;
+	text-transform: uppercase;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	background-color: #74BAA1;
+	padding: 16px 40px;
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+	text-transform: ease-in-out 0.2s;
+}
+.btn-todo:active{
+	background-color:#5EA68D;
+}
+.main{
+	position:absolute;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	background-color:#EEE;
+	overflow-y:auto;
+	padding:80px 30px;
+}
+.mainHeader{
+	position:fixed;
+	left:0;
+	top:0;
+	right:0;
+	height:70px;
+	padding:10px;
+	background-color: #6BB299;
+}
+.align-center{
+	display: block;
+	margin-left:auto;
+	margin-right: auto;
+	width:1292px;
+	height:auto;
+}
+.note{
+	position: relative;
+	display: inline-block;
+	width:300px;
+	height:300px;
+	background-color:#FFF;
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+	margin:20px 10px;
+}
+
+.note .title{
+	float:left;
+	width:100%;
+	height:50px;
+	/*background-color:#6BB299;*/
+}
+
+.note .title .inputTitle{
+	float:left;
+	height:100%;
+	width:250px;
+	padding-left:20px;
+	border:none;
+	font-size:15px;
+	font-weight: 300;
+	outline: none;
+	background:none;
+	color:#FFF;
+}
+
+.note .title.red .inputTitle::-webkit-input-placeholder{
+	color:#FDC7C7;
+}
+
+.note .title.orange .inputTitle::-webkit-input-placeholder{
+	color:#FFF3D9;
+}
+
+.note .title.green .inputTitle::-webkit-input-placeholder{
+	color:#FAFDF4;
+}
+
+.note .title.grey .inputTitle::-webkit-input-placeholder{
+	color:#F4F4F4;
+}
+
+
+
+.note .title.red{
+	background-color:#F48875;
+	color:#FFF;
+}
+.note .title.orange{
+	background-color:#F4CC75;
+	color:#FFF;
+}
+.note .title.green{
+	background-color:#C1F475;
+	color:#FFF;
+}
+.note .title.grey{
+	background-color:#D7D7D7;
+	color:#FFF;
+}
+.note .description{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	padding: 20px;
+	background-color: #F9F9F9;
+	color: #717775;
+	resize: none;
+	font-size: 15px;
+}
+
+.note .description:focus{
+	background-color:#FFF;
+}

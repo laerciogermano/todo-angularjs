@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+	<meta charset='utf-8' />
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	
+	<section class='main'>
+		<header class='mainHeader'>
+			<div class='align-center'>
+				<button class='btn-todo'>Novo lembrete</button>
+			</div>
+		</header>
+		<div class='align-center'>
+			<div class='note'>
+				<header class='title red'>
+					<input type='text' maxlength="33" placeholder='Título do lembrete' class='inputTitle'/>
+				</header>
+				<textarea class='description'></textarea>
+				<span class='date'></span>
+			</div>
+			<div class='note'>
+				<header class='title orange'>
+					<input type='text' placeholder='Título do lembrete' class='inputTitle'/>
+				</header>
+				<textarea class='description'></textarea>
+				<span class='date'></span>
+			</div>
+			<div class='note'>
+				<header class='title green'>
+					<input type='text' maxlength="33" placeholder='Título do lembrete' class='inputTitle'/>
+				</header>
+				<textarea class='description'></textarea>
+				<span class='date'></span>
+			</div>
+			<div class='note'>
+				<header class='title grey'>
+					<input type='text' maxlength="33" placeholder='Título do lembrete' class='inputTitle'/>
+				</header>
+				<textarea class='description'></textarea>
+				<span class='date'></span>
+			</div>
+		</div>
+	</section>
+
+	<script type="text/javascript" src="lib/angular.min.js"></script>
+ 	<script type="text/javascript" src="lib/angular-ui-router.min.js"></script>
+ 	<script type="text/javascript" src="lib/angular-resource.min.js"></script>
+ 	<script type="text/javascript" src="js/todo.js"></script>
+</body>
+</html>
