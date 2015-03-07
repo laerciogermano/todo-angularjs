@@ -4,6 +4,7 @@
 	text-rendering: optimizeLegibility !important;
 }
 .btn-todo{
+	float:left;
 	background-color: #6BB299;
 	color: #FFF;
 	text-transform: uppercase;
@@ -11,12 +12,21 @@
 	cursor: pointer;
 	outline: none;
 	background-color: #74BAA1;
-	padding: 16px 40px;
+	padding: 10px 40px;
 	box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
 	text-transform: ease-in-out 0.2s;
 }
+.btn-todo i{
+	float:left;
+	font-size:20px;
+}
+.btn-todo span{
+	float:left;
+	font-size:14px;
+	margin:5px 5px;
+}
 .btn-todo:active{
-	background-color:#5EA68D;
+	background-color: rgba(255, 255, 255, 0.15);
 }
 .main{
 	position:absolute;
@@ -50,7 +60,6 @@
 	width:300px;
 	height:300px;
 	background-color:#FFF;
-	box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
 	margin:20px 10px;
 }
 
@@ -58,6 +67,7 @@
 	float:left;
 	width:100%;
 	height:50px;
+	color:#FFF;
 	/*background-color:#6BB299;*/
 }
 
@@ -65,15 +75,22 @@
 	float:left;
 	height:100%;
 	width:250px;
-	padding-left:20px;
+	padding-left:30px;
 	border:none;
-	font-size:15px;
+	font-size:12px;
 	font-weight: 300;
 	outline: none;
 	background:none;
 	color:#FFF;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
+.note .title .inputTitle::-webkit-input-placeholder{
+	font-weight: 100;
+	font-size: 13px;
+}
 .note .title.red .inputTitle::-webkit-input-placeholder{
 	color:#FDC7C7;
 }
@@ -83,7 +100,7 @@
 }
 
 .note .title.green .inputTitle::-webkit-input-placeholder{
-	color:#FAFDF4;
+	color:#EDF9DB;
 }
 
 .note .title.grey .inputTitle::-webkit-input-placeholder{
@@ -94,19 +111,33 @@
 
 .note .title.red{
 	background-color:#F48875;
-	color:#FFF;
 }
 .note .title.orange{
 	background-color:#F4CC75;
-	color:#FFF;
 }
 .note .title.green{
-	background-color:#C1F475;
-	color:#FFF;
+	background-color:#BAE776;
 }
 .note .title.grey{
 	background-color:#D7D7D7;
-	color:#FFF;
+}
+
+.note .title .close{
+	float: right;
+	height: 40px;
+	width: 40px;
+	border: none;
+	background: none;
+	color: #FFF;
+	border-radius: 50%;
+	margin: 4px 4px;
+	text-align: center;
+	outline: none;
+	cursor: pointer;
+	transition:ease-in-out 0.05s;
+}
+.note .title .close:active{
+	background-color: rgba(255, 255, 255, 0.15);
 }
 .note .description{
 	position: relative;
@@ -119,8 +150,19 @@
 	color: #717775;
 	resize: none;
 	font-size: 15px;
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
 }
 
 .note .description:focus{
 	background-color:#FFF;
+}
+
+.note .date{
+	float:left;
+	width:100%;
+	height:30px;
+	background: none;
+	border:none;
+	outline: none;
+	color:#868485;
 }
