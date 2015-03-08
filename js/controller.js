@@ -4,6 +4,7 @@ angular.module('todo').controller('TodoController', ['$scope', '$rootScope','$st
 	function($scope, $rootScope, $state) {
 		
 		$scope.todos = [];
+		
 
 		// $scope.todos = getTodos();
 		getTodos(function(obj, index){
