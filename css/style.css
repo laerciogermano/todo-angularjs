@@ -238,7 +238,7 @@
 	}
 }
 
-@media all and (max-width: 999px){
+@media all and  (max-width: 999px){
 	.align-center{
 		width:640px;
 	}
