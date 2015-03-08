@@ -4,7 +4,7 @@ angular.module('todo').controller('TodoController', ['$scope', '$rootScope','$st
 	function($scope, $rootScope, $state) {
 		
 		$scope.todos = [];
-		
+
 
 		// $scope.todos = getTodos();
 		getTodos(function(obj, index){
@@ -34,7 +34,7 @@ angular.module('todo').controller('TodoController', ['$scope', '$rootScope','$st
 			$scope.todos.push({
 				priority : 5,
 				color : 'grey',
-				title : 'Novo Comentário',
+				title : '',
 				description : null,
 				date : null
 			});
