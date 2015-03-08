@@ -5,47 +5,6 @@ angular.module('todo').controller('TodoController', ['$scope', '$rootScope','$st
 		
 		$scope.todos = [];
 
-		// Testando
-		$scope.todos.push({
-			priority : 5,
-			color : 'grey',
-			title : 'Novo Comentário',
-			description : 'Escreva para editar o texto',
-			date : new Date(2015, 3, 7)
-		});
-		$scope.todos.push({
-			priority : 4,
-			color : 'red',
-			title : 'Comentário De hoje',
-			description : 'Escreva para editar o texto',
-			date : new Date()
-		});
-
-		$scope.todos.push({
-			priority : 3,
-			color : 'orange',
-			title : 'Comentário de 1-3 dias',
-			description : 'Escreva para editar o texto',
-			date : new Date(2015, 3, 7)
-		});
-
-		$scope.todos.push({
-			priority : 2,
-			color : 'green',
-			title : 'Comentário de +6 dias',
-			description : 'Escreva para editar o texto',
-			date : new Date(2015, 3, 7)
-		});
-
-		$scope.todos.push({
-			priority : 1,
-			color : 'black',
-			title : 'Comentário Expirado',
-			description : 'Escreva para editar o texto',
-			date : new Date()
-		});
-
-
 		// $scope.todos = getTodos();
 		getTodos(function(obj, index){
 			$scope.todos[index] = obj;
