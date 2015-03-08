@@ -11,7 +11,7 @@
 	border: none;
 	cursor: pointer;
 	outline: none;
-	background-color: #74BAA1;
+	background-color: #3ECB9A;
 	padding: 10px 40px;
 	box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
 	text-transform: ease-in-out 0.2s;
@@ -47,16 +47,20 @@
 	border-radius: 50%;
 }
 
+.definitionBox li.black i{
+	background-color: #666;
+}
+
 .definitionBox li.red i{
-	background-color: #F48875;
+	background-color: #E55D46;
 }
 
 .definitionBox li.orange i{
-	background-color: #F4CC75;
+	background-color: #F7BE43;
 }
 
 .definitionBox li.green i{
-	background-color: #BAE776;
+	background-color: #AAE551;
 }
 
 .definitionBox li.grey i{
@@ -91,7 +95,8 @@
 	right:0;
 	height:70px;
 	padding:10px;
-	background-color: #6BB299;
+	background-color: #46B28C;
+	z-index:1000;
 }
 .align-center{
 	display: block;
@@ -106,7 +111,7 @@
 	width:300px;
 	height:300px;
 	background-color:#FFF;
-	margin:20px 10px;
+	margin:30px 10px;
 }
 
 .note .title{
@@ -133,6 +138,10 @@
 	font-weight: bold;
 }
 
+.note .title.white .inputTitle{
+	color:#000;
+}
+
 .note .title .inputTitle::-webkit-input-placeholder{
 	font-weight: 100;
 	font-size: 13px;
@@ -154,18 +163,20 @@
 }
 
 
-
 .note .title.red{
-	background-color:#F48875;
+	background-color: #E55D46;
 }
 .note .title.orange{
-	background-color:#F4CC75;
+	background-color: #F7BE43;
 }
 .note .title.green{
-	background-color:#BAE776;
+	background-color: #AAE551;
 }
 .note .title.grey{
-	background-color:#D7D7D7;
+	background-color: #D7D7D7;
+}
+.note .title.black{
+	background-color: #666;
 }
 
 .note .title .close{
@@ -197,6 +208,7 @@
 	resize: none;
 	font-size: 15px;
 	box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+	transition:ease-in-out 0.2s;
 }
 
 .note .description:focus{

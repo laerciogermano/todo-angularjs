@@ -9,66 +9,45 @@
 </head>
 <body>
 	
-	<section class='main'>
+	<section class='main' ng-controller='TodoController'>
 		<header class='mainHeader'>
 			<div class='align-center'>
-				<button class='btn-todo'>
+				<button class='btn-todo' ng-click='add()'>
 					<i>+</i>
 					<span>CRIAR LEMBRETE</span>
 				</button>
-<!-- 				-->
 			</div>
 		</header>
 		<div class='align-center'>
 			<ul class='definitionBox'>
+				<li class='black'>
+					<i></i>
+					<span>Expirado</span>
+				</li>
 				<li class='red'>
 					<i></i>
 					<span>Hoje</span>
 				</li>
 				<li class='orange'>
 					<i></i>
-					<span>3-5 dias</span>
+					<span>1-5 dias</span>
 				</li>
 				<li class='green'>
 					<i></i>
-					<span>+6 dias</span>
+					<span>+5 dias</span>
 				</li>
 				<li class='grey'>
 					<i></i>
 					<span>Não configurado</span>
 				</li>
 			</ul> 
-			<div class='note'>
-				<header class='title red'>
-					<input type='text' maxlength="30" placeholder='Título do lembrete' class='inputTitle'/>
-					<button class='close'>X</button>
+			<div class='note' ng-repeat="todo in todos track by $index">
+				<header class='title {{todo.color}}'>
+					<input type='text' maxlength="30" placeholder='Título do lembrete' class='inputTitle' ng-model='todo.title' />
+					<button class='close' ng-click='del($index)'>X</button>
 				</header>
-				<textarea class='description'></textarea>
-				<input type="date" class='date' min="2013-01-01" max="2013-12-31"/>
-			</div>
-			<div class='note'>
-				<header class='title orange'>
-					<input type='text' maxlength="30" placeholder='Título do lembrete' class='inputTitle'/>
-					<button class='close'>X</button>
-				</header>
-				<textarea class='description'></textarea>
-				<input type="date" class='date' min="2013-01-01" max="2013-12-31"/>
-			</div>
-			<div class='note'>
-				<header class='title green'>
-					<input type='text' maxlength="30" placeholder='Título do lembrete' class='inputTitle'/>
-					<button class='close'>X</button>
-				</header>
-				<textarea class='description'></textarea>
-				<input type="date" class='date' min="2013-01-01" max="2013-12-31"/>
-			</div>
-			<div class='note'>
-				<header class='title grey'>
-					<input type='text' maxlength="30" placeholder='Título do lembrete' class='inputTitle'/>
-					<button class='close'>X</button>
-				</header>
-				<textarea class='description'></textarea>
-				<input type="date" class='date' min="2013-01-01" max="2013-12-31"/>
+				<textarea class='description' ng-model='todo.description' ></textarea>
+				<input type="date" class='date' ng-model='todo.date' ng-change='setColor($index)' min="2015-01-01" max="2015-12-31" required />
 			</div>
 		</div>
 	</section>
@@ -76,6 +55,9 @@
 	<script type="text/javascript" src="lib/angular.min.js"></script>
  	<script type="text/javascript" src="lib/angular-ui-router.min.js"></script>
  	<script type="text/javascript" src="lib/angular-resource.min.js"></script>
- 	<script type="text/javascript" src="js/todo.js"></script>
+ 	<script type="text/javascript" src="lib/moment.js"></script>
+ 	<script type="text/javascript" src="js/bootstrap.js"></script>
+ 	<script type="text/javascript" src="js/controller.js"></script>
+ 	<script type="text/javascript" src="js/route.js"></script>
 </body>
 </html>
