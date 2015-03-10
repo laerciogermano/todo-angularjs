@@ -1,6 +1,6 @@
 'use strict';
 
-var modules = ['ngResource','ui.router'];
+var modules = ['ui.router'];
 angular.module('todo', modules);
 
 
